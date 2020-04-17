@@ -1,1 +1,1 @@
-"# REEST cz.1 (projekt o nazwie punkty2, nie robilam juz osobnego projektu punkty3 tylko zawarlam wszytko w punkty2 + przekopiowalam klase HelloControler z projektu punkt, czyli pierwszej/startowej wersji projektu" 
+"# REEST cz.2 baza danych tworzy się w folderze studentdb2"

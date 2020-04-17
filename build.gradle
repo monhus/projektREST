@@ -29,6 +29,10 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.h2database/h2
 	compile group: 'com.h2database', name: 'h2', version: '1.4.200'
 	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'	//Jeśli korzystasz z Java 9 pojawi się błąd: javax.xml.bind.JAXBException
+
+	compile 'io.springfox:springfox-swagger2:2.9.2'
+	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+
 }
 
 test {

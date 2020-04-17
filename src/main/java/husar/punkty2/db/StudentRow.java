@@ -1,9 +1,9 @@
 package husar.punkty2.db;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Entity;
+import husar.punkty2.Student;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class StudentRow {
@@ -15,11 +15,22 @@ public class StudentRow {
     private String number;
     private String grupa;
 
+    @OneToMany(mappedBy = "student")
+    private Set<ScoreRow> scores;
+
     protected StudentRow(){}
     public StudentRow(String name, String number, String grupa){
         this.name = name;
         this.number = number;
         this.grupa = grupa;
+    }
+
+    public Student toStudent(){
+        return  new Student(
+                this.getId(),
+                this.getName(),
+                this.getNumber(),
+                this.getGrupa());
     }
 
 
@@ -53,6 +64,14 @@ public class StudentRow {
 
     public void setGrupa(String grupa) {
         this.grupa = grupa;
+    }
+
+    public Set<ScoreRow> getScores() {
+        return scores;
+    }
+
+    public void setScores(Set<ScoreRow> scores) {
+        this.scores = scores;
     }
 }
 
