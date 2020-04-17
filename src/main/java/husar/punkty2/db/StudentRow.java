@@ -27,10 +27,14 @@ public class StudentRow {
 
     public Student toStudent(){
         return  new Student(
-                this.getId(),
+                this.id,
+                this.name,
+                this.number,
+                this.grupa);
+                /*this.getId(),
                 this.getName(),
                 this.getNumber(),
-                this.getGrupa());
+                this.getGrupa());*/
     }
 
 

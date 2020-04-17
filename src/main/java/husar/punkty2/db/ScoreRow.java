@@ -16,7 +16,8 @@ public class ScoreRow {
     private StudentRow student;
 
     public ScoreRow(int score, String comment, StudentRow student) {
-        this.score = score; this.comment = comment;
+        this.score = score;
+        this.comment = comment;
         this.student = student;
     }
 

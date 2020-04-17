@@ -11,7 +11,8 @@ import java.util.List;
 public class PunktyController {
     //private List<String> users = new CopyOnWriteArrayList<>(new String[] {"Student1", "Student2", "Student3"});
     //private StudentService service = new StudentService(repository);
-    private final StudentService service;
+    //private final StudentService service; ??
+    private StudentService service;
 
     public PunktyController(StudentService service) {
         this.service = service;
@@ -39,7 +40,8 @@ public class PunktyController {
             produces=MediaType.APPLICATION_JSON_VALUE)
     public Student setNumber(@PathVariable("id") long id, @PathVariable("number") String number){
         return this.service.changeNumber(id, number).orElseThrow( () ->
-                new IllegalArgumentException("Student o id: " + id + " does not exist")
+                //new IllegalArgumentException("Student o id: " + id + " does not exist")
+                new NoStudentException(id)
         );
     }
 
